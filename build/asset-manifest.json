@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/native-form/static/css/main.6f9b54a5.chunk.css",
+    "main.js": "/native-form/static/js/main.1bf269f9.chunk.js",
+    "main.js.map": "/native-form/static/js/main.1bf269f9.chunk.js.map",
+    "runtime-main.js": "/native-form/static/js/runtime-main.cd57ce0d.js",
+    "runtime-main.js.map": "/native-form/static/js/runtime-main.cd57ce0d.js.map",
+    "static/js/2.851e6245.chunk.js": "/native-form/static/js/2.851e6245.chunk.js",
+    "static/js/2.851e6245.chunk.js.map": "/native-form/static/js/2.851e6245.chunk.js.map",
+    "index.html": "/native-form/index.html",
+    "precache-manifest.6a2ca8ec1ac169a0823246e43b1b1be4.js": "/native-form/precache-manifest.6a2ca8ec1ac169a0823246e43b1b1be4.js",
+    "service-worker.js": "/native-form/service-worker.js",
+    "static/css/main.6f9b54a5.chunk.css.map": "/native-form/static/css/main.6f9b54a5.chunk.css.map",
+    "static/js/2.851e6245.chunk.js.LICENSE.txt": "/native-form/static/js/2.851e6245.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cd57ce0d.js",
+    "static/js/2.851e6245.chunk.js",
+    "static/css/main.6f9b54a5.chunk.css",
+    "static/js/main.1bf269f9.chunk.js"
+  ]
+}
