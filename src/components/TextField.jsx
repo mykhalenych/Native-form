@@ -29,7 +29,8 @@ export default function TextFields({ setValue, label, error }) {
         variant="outlined"
         onChange={handleChange}
       />
-      {error && <Box className="invalid-feedback">{"Must be 5 characters or more"}</Box>}
+      {error && <Box className="invalid-feedback">{error}</Box>}
+
     </Box>
   );
 }

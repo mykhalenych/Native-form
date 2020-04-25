@@ -1,5 +1,6 @@
 const getErrorsByValues = (values, step) => {
   const errors = {};
+  console.log(errors)
   switch (step) {
     case 0:
       if (values.firstName.length < 5) {
@@ -20,7 +21,7 @@ const getErrorsByValues = (values, step) => {
         errors.email = "Invalid email address";
       }
       if (values.phone.length < 10) {
-        errors.mobile = "Invalid mobile";
+        errors.phone = "Invalid mobile";
       }
       if (values.avatar === "") {
         errors.avatar = "Required";

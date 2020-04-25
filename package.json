@@ -1,7 +1,7 @@
 {
   "name": "form",
   "version": "0.1.0",
-  "homepage": "https://mykhalenych.github.io/native-form",
+  "homepage": "https://mykhalenych.github.io/Native-form",
   "private": false,
   "dependencies": {
     "@date-io/date-fns": "^2.6.1",

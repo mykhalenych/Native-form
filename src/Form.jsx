@@ -20,40 +20,29 @@ const Forma = () => {
   const [city, setCity] = useState("");
   const [sex, setSex] = useState("");
   const [step, setPage] = useState(0);
-  const [error, setError] = useState("");
-
+  const [error, setError] = useState({});
+  // useEffect(() => {
+  // });
   const initialValues = [
     {
       id: Math.round(Math.random() * 1000000),
-      firstName: firstName,
-      lastName: lastName,
-      password: password,
-      age: age,
-      avatar: avatar,
-      phone: phone,
-      email: email,
-      sex: sex,
-      city: city,
+      firstName,
+      lastName,
+      password,
+      age,
+      avatar,
+      phone,
+      email,
+      sex,
+      city,
     },
   ];
-  const errors = {
-    firstName: error,
-    lastName: error,
-    password: error,
-    age: error,
-    avatar: error,
-    phone: error,
-    email: error,
-    sex: error,
-    city: error,
-  };
 
   const nextPage = () => {
     const errors = getErrorsByValues(initialValues[0], step);
     if (Object.keys(errors).length > 0) {
       setError(errors);
     } else {
-      setError("");
       setPage(step + 1);
     }
   };
@@ -66,7 +55,6 @@ const Forma = () => {
 
   const handleSubmit = (initialValues, event) => {
     event.preventDefault();
-    console.log(initialValues);
   };
 
   return (
@@ -82,7 +70,7 @@ const Forma = () => {
               setLastName={setLastName}
               setPass={setPass}
               setAge={setAge}
-              error={errors}
+              error={error}
             />
           </Box>
         )}
@@ -92,7 +80,7 @@ const Forma = () => {
             setAvatar={setAvatar}
             setEmail={setEmail}
             setPhone={setPhone}
-            error={errors}
+            error={error}
           />
         )}
         {step === 2 && (

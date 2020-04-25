@@ -2,8 +2,6 @@
 
 QUICK START
 
-Open: http://mykhalenych.github.io/native-form/
-
 The tech stack is:
 <ul>
   <li>HTML5</li>

@@ -86,7 +86,7 @@ const SecondStep = ({
               >
                 Upload
               </Button>
-              {error && <Box className="invalid-feedback">{"Required"}</Box>}
+              {error && <Box className="invalid-feedback">{error.avatar}</Box>}
             </label>
           </Box>
         </CardActions>
