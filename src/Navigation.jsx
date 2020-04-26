@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
+import PropTypes from "prop-types";
 
 const Navigation = ({ step, nextPage, prevPage, onResetForm }) => {
   return (
@@ -33,6 +34,14 @@ const Navigation = ({ step, nextPage, prevPage, onResetForm }) => {
       )}
     </Box>
   );
+};
+
+Navigation.propTypes = {
+  step: PropTypes.number,
+  error: PropTypes.object,
+  nextPage: PropTypes.func,
+  prevPage: PropTypes.func,
+  onResetForm: PropTypes.func,
 };
 
 export default Navigation;

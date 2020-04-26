@@ -7,6 +7,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import TextFields from "./components/TextField";
 import Box from "@material-ui/core/Box";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   input: {
@@ -99,5 +100,16 @@ const SecondStep = ({
     </Box>
   );
 };
+
+SecondStep.propTypes = {
+  error: PropTypes.object,
+  setAvatar: PropTypes.func,
+  setEmail: PropTypes.func,
+  setPhone: PropTypes.func,
+  avatar: PropTypes.string,
+  phone: PropTypes.string,
+  email: PropTypes.string,
+};
+
 
 export default SecondStep;

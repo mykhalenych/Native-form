@@ -2,6 +2,8 @@ import React from "react";
 import TextFields from "./components/TextField";
 import Password from "./components/Password";
 import NumberField from "./components/NumberField";
+import PropTypes from "prop-types";
+
 
 const FirstStep = ({
   setFirstName,
@@ -27,5 +29,16 @@ const FirstStep = ({
     </>
   );
 };
+
+FirstStep.propTypes = {
+  error: PropTypes.object,
+  setFirstName: PropTypes.func,
+  setLastName: PropTypes.func,
+  firstName: PropTypes.string,
+  lastName: PropTypes.string,
+  password: PropTypes.string,
+  age: PropTypes.number,
+};
+
 
 export default FirstStep;

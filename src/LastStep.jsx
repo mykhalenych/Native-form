@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import RadioField from "./components/RadioField";
 import SelectField from "./components/SelectField";
 import Box from "@material-ui/core/Box";
+import PropTypes from "prop-types";
+
 
 const cities = [
   { name: "Kyiv" },
@@ -34,6 +36,14 @@ const LastStep = ({ city, setCity, sex, setSex }) => {
       <SelectField value={cities} city={city} setCity={setCity} />
     </Box>
   );
+};
+
+LastStep.propTypes = {
+  setAvatar: PropTypes.func,
+  setSsetCityex: PropTypes.func,
+  setPhone: PropTypes.func,
+  city: PropTypes.string,
+  sex: PropTypes.string,
 };
 
 export default LastStep;

@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Box from "@material-ui/core/Box";
-
+import PropTypes from "prop-types";
 
 const stepsName = [
   {
@@ -35,6 +35,9 @@ const Steps = ({ step }) => {
       <Box className="step-title">{steps.name}</Box>
     </Box>
   ));
+};
+Steps.propTypes = {
+  step: PropTypes.number
 };
 
 export default Steps;

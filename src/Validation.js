@@ -1,6 +1,5 @@
 const getErrorsByValues = (values, step) => {
   const errors = {};
-  console.log(errors)
   switch (step) {
     case 0:
       if (values.firstName.length < 5) {
