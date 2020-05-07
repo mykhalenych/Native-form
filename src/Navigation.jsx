@@ -2,8 +2,15 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import PropTypes from "prop-types";
+import { createUser } from "./gateWays/gateWays";
 
-const Navigation = ({ step, nextPage, prevPage, onResetForm }) => {
+const Navigation = ({ step, nextPage, prevPage, onResetForm, value }) => {
+  
+  const handleSubmit = (event, value) => {
+    event.preventDefault();
+    createUser(value)
+  };
+
   return (
     <Box
       style={{
@@ -28,9 +35,30 @@ const Navigation = ({ step, nextPage, prevPage, onResetForm }) => {
           </Button>
         </Box>
       ) : (
-        <Button variant="contained" color="primary" onClick={onResetForm}>
-          Reset
-        </Button>
+        <Box
+          style={{
+            display: "flex",
+          }}
+        >
+          <Box
+            style={{
+              marginRight: "15px",
+            }}
+          >
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={(event) => handleSubmit(event, value)}
+            >
+              Submit
+            </Button>
+          </Box>
+          <Box>
+            <Button variant="contained" color="primary" onClick={onResetForm}>
+              Reset
+            </Button>
+          </Box>
+        </Box>
       )}
     </Box>
   );

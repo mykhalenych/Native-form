@@ -11,6 +11,7 @@ import LastStep from "./LastStep";
 import Steps from "./Steps";
 import Box from "@material-ui/core/Box";
 import Finish from "./Finish";
+import { createUser } from "./gateWays/gateWays";
 
 const App = () => {
   const [password, setPass] = useState("");
@@ -25,23 +26,23 @@ const App = () => {
   const [step, setPage] = useState(0);
   const [error, setError] = useState({});
 
-  const initialValues = [
+  const initialValues = 
     {
       id: Math.round(Math.random() * 1000000),
       firstName,
       lastName,
       password,
       age,
-      avatar,
+ //     avatar,
       phone,
       email,
       sex,
       city,
-    },
-  ];
+    }
+  const picture = avatar;
 
   const nextPage = () => {
-    const errors = getErrorsByValues(initialValues[0], step);
+    const errors = getErrorsByValues(initialValues, step);
     if (Object.keys(errors).length > 0) {
       setError(errors);
     } else {
@@ -55,8 +56,8 @@ const App = () => {
     setPage(step - 3);
   };
 
-  const handleSubmit = (initialValues, event) => {
-    event.preventDefault();
+  const handleSubmit = (initialValues) => {
+    createUser(initialValues)
   };
 
   return (
@@ -85,7 +86,7 @@ const App = () => {
               )}
               {step === 1 && (
                 <SecondStep
-                  avatar={avatar}
+                  avatar={picture}
                   setAvatar={setAvatar}
                   setEmail={setEmail}
                   setPhone={setPhone}
@@ -100,8 +101,9 @@ const App = () => {
                   setSex={setSex}
                 />
               )}
-              {step === 3 && <Finish value={initialValues} />}
+              {step === 3 && <Finish value={initialValues} picture={picture}/>}
               <Navigation
+                value={initialValues}
                 onResetForm={resetForm}
                 nextPage={nextPage}
                 prevPage={prevPage}
@@ -114,6 +116,5 @@ const App = () => {
     </React.Fragment>
   );
 };
-
 
 export default App;

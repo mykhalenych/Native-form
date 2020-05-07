@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   wrap: {
     display: "flex",
     justifyContent: "center",
-    marginBottom: "20px"
+    marginBottom: "20px",
   },
   block: {
     minWidth: "150px",
@@ -38,34 +38,33 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Finish = ({ value }) => {
+const Finish = ({ value, picture }) => {
   const classes = useStyles();
 
-  return value.map((item) => (
-    <Box key={item.id} className={classes.wrap}>
-      <Paper >
+  return (
+    <Box key={value.id} className={classes.wrap}>
+      <Paper>
         <CardMedia
           className={classes.img}
           component="img"
           alt="Contemplative Reptile"
           height="240"
-          image={item.avatar}
+          image={picture}
           title="Contemplative Reptile"
         />
       </Paper>
       <Grid className={classes.block} item xs={4}>
-        <Paper className={classes.paper}>First name: {item.firstName}</Paper>
-        <Paper className={classes.paper}>Last name: {item.lastName}</Paper>
-        <Paper className={classes.paper}>Password: {item.password}</Paper>
-        <Paper className={classes.paper}>Age: {item.age}</Paper>
-        <Paper className={classes.paper}>Phone: {item.phone}</Paper>
-        <Paper className={classes.paper}>Email: {item.email}</Paper>
-        <Paper className={classes.paper}>City: {item.city}</Paper>
-        <Paper className={classes.paper}>Sex: {item.sex}</Paper>
+        <Paper className={classes.paper}>First name: {value.firstName}</Paper>
+        <Paper className={classes.paper}>Last name: {value.lastName}</Paper>
+        <Paper className={classes.paper}>Password: {value.password}</Paper>
+        <Paper className={classes.paper}>Age: {value.age}</Paper>
+        <Paper className={classes.paper}>Phone: {value.phone}</Paper>
+        <Paper className={classes.paper}>Email: {value.email}</Paper>
+        <Paper className={classes.paper}>City: {value.city}</Paper>
+        <Paper className={classes.paper}>Sex: {value.sex}</Paper>
       </Grid>
     </Box>
-  ));
+  );
 };
-
 
 export default Finish;
